@@ -23,6 +23,7 @@ filelock==3.16.1
 Flask==3.0.3
 fonttools==4.55.0
 fsspec==2024.10.0
+git-filter-repo==2.45.0
 h11==0.14.0
 huggingface-hub==0.26.2
 idna==3.4
@@ -62,4 +63,5 @@ tzdata==2023.3
 urllib3==1.26.16
 uvicorn==0.32.0
 Werkzeug==3.0.6
+whitenoise==6.8.2
 Whoosh==2.7.4
