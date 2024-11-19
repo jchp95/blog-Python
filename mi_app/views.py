@@ -330,7 +330,13 @@ def highlight_terms(text, terms):
     escaped_terms = [re.escape(term) for term in terms]
     pattern = re.compile('|'.join(escaped_terms), re.IGNORECASE)
     return pattern.sub(lambda match: f'<span class="highlight">{match.group(0)}</span>', text)
+################## MANEJO DE ERRORES #####################################################
 
+def custom_404_view(request, exception):
+    return render(request, '404.html', status=404)
+
+def custom_500_view(request):
+    return render(request, '500.html', status=500)
 
 #################################chat IA###########################################
 

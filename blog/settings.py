@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-i0##hrm!2)h@oaj!h$e3_^8e=*-_(+v!s)l@8q6we--d(_czue'
+SECRET_KEY = 'SECRET_KEY' 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -129,12 +129,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 # Configuración de archivos estáticos
 MEDIA_URL = '/media/'
-STATIC_URL = 'static/'
 STATIC_URL = '/static/'  # URL para acceder a los archivos estáticos
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Ruta donde se recogerán los archivos estáticos
 # Directorios adicionales donde Django buscará archivos estáticos
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Ajusta esto según la estructura de tu proyecto
+    os.path.join(BASE_DIR, 'mi_app', 'static'),  # Ajusta esto según la estructura de tu proyecto
 ]
 
 
