@@ -30,7 +30,8 @@
                     <div class="article-card">
                         <h3 class="article-title">{{ article.title }}</h3>
                         <p class="article-content">{{ article.content|truncatewords:50 }}
-                            <a href="{% url 'articles_details' article.id %}">Leer más</a>
+                            <a href="{% url 'articles_details' article.id %}"  class="article-link">Leer más</a>
+
                         </p>
                         <small class="article-date">{{ article.created_at }}</small>
                     </div>

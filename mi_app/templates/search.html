@@ -2,7 +2,7 @@
 {% load static %}
 
     <div class="search-container">
-        <form action="{% url 'search_results' %}" method="get">  <!-- Cambia 'search_results' por el nombre de tu URL de resultados -->
+        <form action="{% url 'search' %}" method="get">  <!-- Cambia 'search_results' por el nombre de tu URL de resultados -->
             <input type="text" name="q" class="search-input" placeholder="Buscar..." required />
             <button type="submit" class="search-button">🔍</button>
         </form>

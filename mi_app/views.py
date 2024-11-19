@@ -57,7 +57,7 @@ def home(request):
     })
 
 
- #######################   REGISER  ##########################################
+ #######################   REGISTER  ##########################################
 def register(request):
     if request.method == 'POST':
         form = CustomUser_CreationForm(request.POST)
@@ -78,7 +78,7 @@ def register(request):
 ################################ LOG IN ######################################################################
 
 class CustomLoginView(LoginView):
-    template_name = 'login.html'  # Asegúrate de tener esta plantilla
+    template_name = 'registration/login.html'  # Asegúrate de tener esta plantilla
 
     def form_valid(self, form):
         # Llama al método padre para procesar el formulario
