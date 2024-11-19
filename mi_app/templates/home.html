@@ -52,7 +52,7 @@
                             <img src="{{ news.image.url }}" alt="" class="news-image"> <!-- Imagen -->
                         {% endif %}
                         <p class="news-content">{{ news.content|truncatewords:30 }}
-                            <a href="{% url 'news_details' news.id %}">Leer más</a>
+                            <a href="{% url 'news_details' news.id %}" class="article-link">Leer más</a>
                         </p>
                         <small class="news-date">{{ news.created_at }}</small>
                     </div>
