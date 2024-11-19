@@ -20,5 +20,5 @@ def main():
 
 
 if __name__ == '__main__':
-    uvicorn.run("blog.asgi:application", host="127.0.0.1", port=int(os.environ.get("PORT", 8000)), reload=True)
-    
+    main()
+
