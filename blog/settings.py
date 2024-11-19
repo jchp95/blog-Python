@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 # Configura los orígenes permitidos
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:8000/",  # Cambia esto según tu configuración
+    "http://127.0.0.1:8000",  # Cambia esto según tu configuración
     "https://elblog.onrender.com",
 ]
 
