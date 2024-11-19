@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 HAYSTACK_CONNECTIONS = {
@@ -128,9 +129,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 # Configuración de archivos estáticos
 MEDIA_URL = '/media/'
+STATIC_URL = 'static/'
 STATIC_URL = '/static/'  # URL para acceder a los archivos estáticos
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Ruta donde se recogerán los archivos estáticos
-STATIC_URL = 'static/'
+# Directorios adicionales donde Django buscará archivos estáticos
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # Ajusta esto según la estructura de tu proyecto
+]
+
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
