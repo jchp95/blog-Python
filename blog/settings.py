@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os 
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -149,8 +152,8 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # Configura tus credenciales de Google
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'SOCIAL_AUTH_GOOGLE_OAUTH2_KEY'  # Reemplaza con tu Client ID de Google
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET'  # Reemplaza con tu Client Secret de Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')  # Reemplaza con tu Client ID de Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')  # Reemplaza con tu Client Secret de Google
 
 # Opcional: redirigir después de iniciar sesión
 LOGIN_REDIRECT_URL = 'home'  # Cambia esto a la URL a la que deseas redirigir después del inicio de sesión
