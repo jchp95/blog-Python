@@ -43,11 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mi_app',
+    'corsheaders',
     'haystack',
     'social_django',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -58,12 +60,20 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+# Configura los orígenes permitidos
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000/",  # Cambia esto según tu configuración
+    "https://elblog.onrender.com",
+]
+
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
         'PATH': os.path.join(BASE_DIR, 'whoosh_index'),  # Asegúrate de que este directorio exista
     },
 }
+
+
 
 ROOT_URLCONF = 'blog.urls'
 
