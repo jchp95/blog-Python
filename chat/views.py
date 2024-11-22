@@ -5,6 +5,13 @@ from django.views import View
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
+import os
+import requests
+from dotenv import load_dotenv
+
+
+# Cargar las variables de entorno desde el archivo .env
+load_dotenv()
 
 class ChatResponseView(View):
     def get(self, request):
@@ -47,11 +54,16 @@ class ChatResponseView(View):
             )
         return None
 
+class YourClass:
     def call_gemini_api(self, message):
         """Llama a la API de Gemini y devuelve la respuesta generada."""
+        api_key = os.getenv('GEMINI_API_KEY')  # Obtener la clave de API de las variables de entorno
+        if not api_key:
+            return 'Error: La clave de API no está configurada.'
+
         try:
             response = requests.post(
-                'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyD_STV0Vp-wumHf467Zux1bPlKAYzoAI74',
+                f'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={api_key}',
                 headers={'Content-Type': 'application/json'},
                 json={'contents': [{'parts': [{'text': message}]}]}
             )
