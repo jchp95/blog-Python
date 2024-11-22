@@ -26,6 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", 'default_secret_key')
 
+#KEY GEMINI
+KEY = os.environ.get("KEY")
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "FALSE").lower() == "true"
 
@@ -47,6 +50,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'haystack',
     'social_django',
+    'chat',
+    
 ]
 
 MIDDLEWARE = [
@@ -149,6 +154,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Ruta donde se recogerán 
 # Directorios adicionales donde Django buscará archivos estáticos
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'mi_app', 'static'),  # Ajusta esto según la estructura de tu proyecto
+    os.path.join(BASE_DIR, 'chat', 'static'), 
 ]
 
 

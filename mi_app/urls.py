@@ -30,10 +30,12 @@ from .views import (
     cursos,
     switch_language,
     search,
+ 
 
 )
 
 urlpatterns = [
+   
  
     path('', home, name='home'),  # Vista de inicio
 
