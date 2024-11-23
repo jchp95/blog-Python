@@ -298,9 +298,11 @@ def search(request):
     try:
         if query:
             results = SearchQuerySet().filter(content=query) | SearchQuerySet().filter(title=query)
+            print(f"Resultados iniciales: {len(results)}")  # Verifica cuántos resultados se obtienen
             terms = query.split()
             for term in terms:
                 results = results | SearchQuerySet().filter(content=term) | SearchQuerySet().filter(title=term)
+                print(f"Resultados después de filtrar por términos: {len(results)}")  # Verifica el número de resultados después de filtrar
 
             # Resaltar términos en los resultados
             for result in results:

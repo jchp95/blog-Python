@@ -20,7 +20,7 @@
 
 .search-input {
     border: none;
-    padding: 12px 20px;
+    padding: 30px 20px;
     font-size: 16px;
     outline: none;
     width: 500px;
@@ -36,8 +36,8 @@
     color: #aaa; /* Color del texto del placeholder */
 }
 
-.search-button {
-    background-color: #ffffff; /* Color de fondo del botón */
+.search-icono {
+    background-color: #ffffff00; /* Color de fondo del botón */
     color: white; /* Color del texto */
     border: none;
     padding: 12px 15px;
@@ -45,11 +45,11 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.search-button:hover {
+.search-icono:hover {
     background-color: #ffffff00; /* Color de fondo al pasar el ratón */
 }
 
-.search-button:active {
+.search-icono:active {
     transform: scale(0.95); /* Efecto de pulsación al hacer clic */
     background-color: violet;
 }
