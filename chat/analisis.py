@@ -6,6 +6,9 @@ from nltk.stem import WordNetLemmatizer
 from collections import Counter
 import re
 
+# Agregar la ruta a nltk_data
+nltk.data.path.append('nltk_data')  # Cambia esto a la ruta correcta
+
 def analizar_preguntas(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         preguntas = file.readlines()
