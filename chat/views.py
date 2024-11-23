@@ -54,8 +54,11 @@ class ChatResponseView(View):
 
     def call_gemini_api(self, message):
         """Llama a la API de Gemini y devuelve la respuesta generada."""
-        api_key = os.getenv("GEMINI_API_KEY")  # Cargar la clave de API desde el archivo .env
+        api_key = os.getenv("GEMINI_API_KEY")
         
+        if not api_key:
+            return 'Error: La clave de API no está configurada.'
+
         try:
             response = requests.post(
                 f'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={api_key}',
