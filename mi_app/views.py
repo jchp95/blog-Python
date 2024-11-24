@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Article, News, Comment, Reply, CustomUser_CreationForm, Image, TermsAndConditions, Services, Contact, BannerHome, About, Carousel,CarouselCursos, Cursos
+from .models import Article, News, Comment, Reply, CustomUser_CreationForm, Image, TermsAndConditions, Services, Contact, BannerHome, About, Carousel,CarouselCursos, Curso, Cursos
 from .forms import TermsAndConditionsForm, ServicesForm, ContactForm, ContactMessageForm
 from django.views.decorators.csrf import csrf_protect
 from django.contrib import messages
@@ -253,7 +253,15 @@ def terms_and_conditions_view(request):
         'terms': terms,
         'images': images
          })
-
+######################### CURSOS ############################################
+@csrf_protect
+@login_required
+def lista_cursos(request):
+    cursos = Curso.objects.all()
+    return render(request, 'cursos/lista_cursos.html', {'cursos': cursos})
+    
+@csrf_protect
+@login_required
 def cursos(request):
     cursos_list = Cursos.objects.all()  # Puedes aplicar filtros si es necesario
 
@@ -261,7 +269,7 @@ def cursos(request):
     context = {
         'cursos': cursos_list  # 'cursos' será la variable que usarás en la plantilla
     }
-    return render(request, 'cursos.html', context)
+    return render(request, 'cursos/cursos.html', context)
 
 ########################## CAMBIO DE IDIOMA  ##############################
 

@@ -78,7 +78,7 @@
     padding: 10px 20px; /* Espaciado interno del botón */
     font-size: 16px; /* Tamaño de fuente del botón */
     transition: background-color 0.3s, border-color 0.3s; /* Transición suave para el fondo y el borde */
-    margin-bottom: 20px; /* Espacio inferior para separar el botón del pie de página */
+    margin: 10px; /* Espacio inferior para separar el botón del pie de página */
     color: #333; /* Color del texto */
     transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y transformación */
 }
@@ -91,6 +91,25 @@
     color: #333; /* Color del texto */
 }
 
+.btn-primary-register{
+    border: none; /* Sin borde */
+    background-color: #3333332c; /* Color de fondo del botón */
+    border-radius: 50px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    transition: background-color 0.3s, border-color 0.3s; /* Transición suave para el fondo y el borde */
+    margin: 10px; /* Espacio inferior para separar el botón del pie de página */
+    color: #333; /* Color del texto */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y transformación */
+}
+
+.btn-primary-register:hover {
+    background-color: #aabc21; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.1); /* Aumentar ligeramente el tamaño del texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+    color: #000000; /* Color del texto */
+}
+
 .forgot-password{
     display: flex;
     justify-content: center;
@@ -99,6 +118,8 @@
 .a-login {
     color: #333;
     transition: color 0.3s ease; /* Agrega una transición suave de 0.3 segundos */
+    font-size: 14px;
+    margin: 10px;
 }
 
 .a-login:hover{

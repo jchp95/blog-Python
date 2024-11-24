@@ -136,6 +136,23 @@ class About(models.Model):
     def __str__(self):
         return "About Page Content"
 
+
+############################# cursos ############################
+
+
+class Curso(models.Model):
+    nombre = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.nombre
+
+class Capitulo(models.Model):
+    curso = models.ForeignKey(Curso, related_name='capitulos', on_delete=models.CASCADE)
+    titulo = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.titulo
+
 class Cursos(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()

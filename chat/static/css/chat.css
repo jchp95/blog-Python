@@ -1,5 +1,5 @@
 /* Estilo del ícono de chat */
-#chat-icon {
+.chat-icon {
     background-color: #ffffff27; /* Color de fondo azul */
     border-radius: 50%;
     padding: 15px;
@@ -13,7 +13,7 @@
 }
 
 /* Estilo del offcanvas */
-#chatOffcanvas {
+.chatOffcanvas {
     display: none; /* Oculto por defecto */
     position: fixed;
     top: 0;
@@ -49,7 +49,7 @@
 }
 
 /* Estilo del contenedor de chat */
-#chat-container {
+.chat-container {
     background-color: #f9f9f9; /* Fondo del contenedor de chat */
     border-radius: 5px;
     padding: 10px;
@@ -105,13 +105,13 @@
 }
 
 /* Estilo del formulario de chat */
-#chat-form {
+.chat-form {
     display: flex; /* Flexbox para alinear elementos */
     gap: 10px; /* Espacio entre elementos */
     align-items: baseline }
 
 /* Estilo del campo de mensaje */
-#message {
+.message {
     flex: 1;
     padding: 5px 10px;
     border: 1px solid #ccc; /* Borde gris claro */
@@ -119,13 +119,13 @@
     transition: border-color 0.3s; /* Transición suave */
 }
 
-#message:focus {
+.message:focus {
     border-color: #007bff; /* Borde azul al enfocar */
     outline: none; /* Sin contorno */
 }
 
 /* Estilo del botón de enviar */
-button {
+.button {
     border: none; /* Sin borde */
     background-color: #3333332c; /* Color de fondo del botón */
     border-radius: 50px; /* Bordes redondeados */
@@ -137,7 +137,7 @@ button {
     transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y transformación */
 }
 
-button:hover {
+.button:hover {
     background-color: #aabc21; /* Color más oscuro al pasar el mouse */
     transform: scale(1.1); /* Aumentar ligeramente el tamaño del texto */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
@@ -151,13 +151,13 @@ button:hover {
     justify-content: center;
 }
 
-#close-chat {
+.close-chat {
     background-color: #dc3545; /* Color rojo */
     margin-top: 10px;
     margin-left: 20px;
 }
 
-#close-chat:hover {
+.close-chat:hover {
     background-color: #c82333; /* Color rojo más oscuro al pasar el mouse */
 }
 

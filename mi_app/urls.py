@@ -30,7 +30,7 @@ from .views import (
     cursos,
     switch_language,
     search,
- 
+    lista_cursos
 
 )
 
@@ -60,6 +60,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),  # Contacto
     path('terms/', terms_and_conditions_view, name='terms_and_conditions'),  # Términos y condiciones
     path('cursos/', cursos, name='cursos'),  # Cursos
+     path('lista_cursos/', lista_cursos, name='lista_cursos'),
     path('switch_language/', switch_language, name='switch_language'),  # Cambiar idioma
     path('search/', search, name='search'),
 ]

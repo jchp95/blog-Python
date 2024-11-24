@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from .models import News, Article, Comment, Image, TermsAndConditions, Services, Contact, BannerHome, About, Carousel,CarouselCursos, Cursos
+from .models import News, Article, Comment, Image, TermsAndConditions, Services, Contact, BannerHome, About, Carousel,CarouselCursos, Curso, Cursos, Capitulo
 from .models import ContactMessage
 
 
@@ -68,6 +68,24 @@ class AboutAdmin(admin.ModelAdmin):
         'footer_message',
     )
     
+
+class CapituloInline(admin.TabularInline):
+    model = Capitulo
+    extra = 1  # Número de formularios vacíos para agregar nuevos capítulos
+
+class CursoAdmin(admin.ModelAdmin):
+    inlines = [CapituloInline]
+
+admin.site.register(Curso, CursoAdmin)
+
+
+
+class CapituloInline(admin.TabularInline):
+    model = Capitulo
+    extra = 1  # Número de formularios vacíos para agregar nuevos capítulos
+admin.site.register(Cursos)
+
+
+
 admin.site.register(Carousel)
 admin.site.register(CarouselCursos)
-admin.site.register(Cursos)
