@@ -1,0 +1,74 @@
+/* Estilos generales para el contenedor de búsqueda */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgb(0 0 0 / 6%);
+    width: 500px;
+    margin: 0 auto;
+}
+
+/* Estilos para el formulario de búsqueda */
+.search-form {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    width: 100%; /* Hacer que el formulario ocupe todo el ancho del contenedor */
+}
+
+/* Estilos para el campo de entrada */
+.search-input {
+    flex: 1; /* Hacer que el campo de entrada ocupe todo el espacio disponible */
+    padding: 12px 20px; /* Espaciado interno */
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 50px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto al enfocar el campo de entrada */
+.search-input:focus {
+    border-color: #007BFF; /* Cambiar el color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+    outline: none; /* Eliminar el contorno predeterminado */
+}
+
+/* Estilos para el botón de búsqueda */
+.search-button {
+    background-color: #ffffff; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* Bordes redondeados */
+    padding: 12px 20px; /* Espaciado interno */
+    margin-left: 10px; /* Espaciado a la izquierda del botón */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.search-button:hover {
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+/* Efecto al hacer clic en el botón */
+.search-button:active {
+    transform: translateY(0); /* Restablecer la posición al hacer clic */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .search-container {
+        padding: 5px;
+        right: 20px;
+        position: relative;
+    }
+
+    .search-input {
+        padding: 10px; /* Ajustar el espaciado interno en pantallas pequeñas */
+        font-size: 14px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    .search-button {
+        padding: 10px; /* Ajustar el espaciado interno en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,141 @@
+.general-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #ffffff;
+}
+
+.navbar-logo .logo {
+    height: 42px;
+    transition: transform 0.3s;
+    margin-left: 30px;
+}
+
+.navbar-logo .logo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del logo al pasar el mouse */
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.2)); /* Aumenta la sombra al pasar el mouse */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-link a{
+    color: #333;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 100;
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.navbar-link a:hover {
+    color: #aabc21;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.icon {
+    position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
+}
+
+.bar {
+    height: 3px;
+    width: 20px;
+    background-color: #aabc21; /* Color de las barras del botón de hamburguesa */
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .general-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        background-color: #ffffff;
+    }
+    .navbar-list {
+        display: none; /* Inicialmente oculto */
+    }
+
+    .navbar-logo .logo {
+        height: 100px;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transition: transform 0.3s;
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        height: auto;
+        padding: 5px;
+        margin-left: 10px;
+    }
+
+    .fas .fa-home {
+    font-weight: 900;
+    color: #aabc21;
+}
+
+   /* Muestra el menú cuando tiene la clase 'active' */
+   .navbar-list.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgb(51, 51, 51), rgba(51, 51, 51, 0.5)); /* Degradado */
+    backdrop-filter: blur(20px); /* Desenfoque gaussiano */
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    max-height: 400px;
+    opacity: 1;
+}
+
+    .navbar-toggle {
+        display: flex; /* Muestra el botón de hamburguesa */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        z-index: 9999;
+    }
+
+    .navbar-link a {
+        color: #aabc21;
+        text-decoration: none;
+        padding: 15px;
+        font-weight: 100;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-list.active {
+        display: grid;
+        max-height: 400px;
+        opacity: 1;
+        justify-content: center;
+        align-items: center;
+ }
+
+    /* Estilo para el botón de hamburguesa */
+    .navbar-toggle .icon {
+        width: 30px; /* Ancho de las líneas del icono */
+        height: 3px; /* Grosor de las líneas del icono */
+        background-color: #aabc21; /* Color de las líneas, igual que la X */
+        margin: 5px 0; /* Espaciado entre las líneas */
+        transition: all 0.3s; /* Transiciones para el icono */
+    }
+
+}
